@@ -69,7 +69,7 @@ if [ "$WHICH" = "Loop" ]
 then
 
     echo -e "Please select which version of Loop you would like to download and build.\n\nType the number for the branch and hit enter to select the branch.\nType 4 and hit enter to cancel.\n\n"
-    options=("Master Branch" "Master branch, short carbs" "Cancel")
+    options=("Master Branch" "Master Branch - Short carb duration" "Cancel")
     select opt in "${options[@]}"
     do
         case $opt in
@@ -79,8 +79,8 @@ then
                 BRANCH=master
                 break
                 ;;
-            "Master branch, short carbs")
-                FOLDERNAME=Loop-Automatic-Bolus
+            "Master Branch - Short carb duration")
+                FOLDERNAME=Loop-Short-Carb
                 REPO=https://github.com/yodax/LoopWorkspace
                 BRANCH=master-short-carb
                 break
