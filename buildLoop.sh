@@ -139,7 +139,7 @@ then
     clear
 
     echo -e "Please select which version of Loop you would like to download and build.\n\nType the number for the branch and hit enter to select the branch.\nType 4 and hit enter to cancel.\n\n"
-    options=("Master Branch" "OrangeLink, EU, DIA - Automatic Bolus Branch" "Automatic Bolus Branch" "FreeAPS" "Cancel")
+    options=("Master Branch" "Master branch, short carbs" "Cancel")
     select opt in "${options[@]}"
     do
         case $opt in
@@ -149,22 +149,10 @@ then
                 BRANCH=master
                 break
                 ;;
-            "OrangeLink, EU, DIA - Automatic Bolus Branch")
+            "Master branch, short carbs")
                 FOLDERNAME=Loop-Automatic-Bolus
                 REPO=https://github.com/yodax/LoopWorkspace
-                BRANCH=automatic-bolus-orangelink-dexcom-eu
-                break
-                ;;
-            "Automatic Bolus Branch")
-                FOLDERNAME=Loop-Automatic-Bolus
-                REPO=https://github.com/LoopKit/LoopWorkspace
-                BRANCH=automatic-bolus
-                break
-                ;;
-            "FreeAPS")
-                FOLDERNAME=FreeAPS
-                REPO=https://github.com/ivalkou/LoopWorkspace
-                BRANCH=freeaps
+                BRANCH=master-short-carb
                 break
                 ;;
             "Cancel")
